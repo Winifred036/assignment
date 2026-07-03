@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+
+        
+
+        let studentName = "Winifred LongJohn";
+        let secretNo = 5315;
+        let studyhrs = 20;
+        let mood = "happy";
+        let techSkill = "coding";
+        let assignedTask;
+
+        let assessment = '';
+
+        if(secretNo == 5315){
+            assessment = "Secret Number verified."
+        } else if(studyhrs >= 25){
+            assessment = "It's been a really productive week!"
+        } 
+        else if(studyhrs >= 20){
+            assessment = "I could've gotten a bit more work done."
+        } 
+        else if(studyhrs >= 10){
+            assessment = "I'm going to have to make up for all my lost hours."
+        } 
+        else{
+            assessment = "What a complete waste of week!"
+        }
+
+
+        if(studyhrs >= 25 && mood =="happy"){
+            assessment ="It's been a good week";
+        } else if(studyhrs >= 20 && mood =="tired"){
+            assessment ="I've done my best";
+
+        } else if(studyhrs <= 5 && mood =="lazy"){
+            assessment = "Why can't I just sleep the whole week?"
+
+        } else if(studyhrs <= 5 && mood == "tired"&& techSkill == "coding"){
+            assessment = "I don't want to see another logic statement!"
+        } else{
+            assessment = "It is well"
+        }
+
+        switch(techSkill){
+            case "coding":
+                if (studyhrs >= 20 && mood == "happy") {
+                    assignedTask = "Build a JavaScript calculator.";
+                } else {
+                    assignedTask = "Practice JavaScript variables and functions.";
+                }
+                break;
+
+            case "design":
+                if (studyhrs<=10 && mood == "tired") {
+                    assignedTask = "Practice color theory and typography.";
+                } else {
+                    assignedTask = "Design a modern website landing page.";
+                }
+                break;
+
+            case "editing":
+                if (studyhrs <= 5 && mood == "lazy") {
+                    assignedTask = "Learn basic video transitions.";
+                } else {
+                    assignedTask = "Edit a short promotional video.";
+                }
+                break;
+
+                default:
+                assignedTask = "Explore a new technology and develop a beginner project.";
+        }
+
+        document.getElementById("output").innerHTML =
+        "===== SMART STUDENT DECISION ENGINE =====<br><br>" +
+        "Student Name: " + studentName + "<br>" +
+        "Evaluation: " + assessment + "<br>" +
+        "Assigned Task: " + assignedTask;
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+
+
+
+
+
+    </script>
+</body>
+</html>
