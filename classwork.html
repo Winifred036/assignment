@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let colors = ["Red", "Blue", "Green", "Black", "White"];
+        let text;
+
+        for (i = 0; i < colors.length; i++){
+            switch(colors[i]){
+                case "Red":
+                    console.log("Red is the color of Love");
+                    break;
+                case "Blue":
+                    console.log("Blue is the color of the Sky");
+                    break;
+                case "Green":
+                    console.log("Green is the color of Nature");
+                    break;
+                case "Black":
+                    console.log("Black is the color of Power");
+                    break;
+                case "White":
+                    console.log("White is the color of Peace.");
+                    break;
+                default:
+                    "Unknown color";
+                
+            }
+            
+        }
+
+        const student = {
+            name: "Sylvester",
+            age: 22,
+            course: "Aerophysics",
+            level: 500,
+            isRegistered: true,
+        }
+        console.log("Student Name: " + student.name);
+        console.log("Course: " + student.course);
+
+        let phone = {
+            brand: "Samsung",
+            model: "A35",
+            storage: "128GB", 
+            price: 350000
+        }
+
+        console.log(phone.model);
+        phone.price = 370000;
+        phone.color = "Black";
+        console.log(phone);
+
+        let laptop = {
+            brand: "HP",
+            ram: "8GB",
+            processor: "Core i5",
+            storage: "512GB SSD" 
+
+        }
+
+        for (let spec in laptop){
+            console.log(laptop[spec]);
+        }
+        
+
+        
+
+
+        
+    </script>
+    
+</body>
+</html>
